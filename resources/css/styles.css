@@ -1,0 +1,230 @@
+* {
+  box-sizing:border-box;
+  font-family:Helvetica;
+
+
+  opacity:0.9;
+  text-align: center;
+  color:seashell;
+}
+  
+html {
+  font-size: 22px;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  color:seashell;
+  text-decoration:underline;
+  height:69px;
+  padding:0 10px;
+  z-index: 2;
+  border-bottom: seashell 1px solid;
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color: black;
+}
+
+nav img {
+  float:left;
+  height:50px;
+  width:auto;
+
+}
+
+nav ul{
+  display:flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+nav li {
+  padding:20px;
+  list-style-type: none;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 700px){
+  nav ul{
+    flex-direction: column;
+  }
+  nav ul li {
+    font-size:15px;
+    padding:3px;
+  }
+}
+@media only screen and (max-width:375px){
+  nav ul li {
+    font-size:12px;
+  }
+}
+
+.jumbotron {
+  display:flex;
+  flex-direction: column;
+  margin: 69px auto 0 auto;
+  background-image:url("../img-mission-background.jpg");
+  background-position:center;
+  background-repeat:no-repeat;
+  height:700px;
+  align-items:center;
+  max-width:1200px;
+  justify-content: center;
+}
+@media only screen and (max-width:768px){
+  .jumbotron {
+    height:400px;
+  }
+}
+
+.jumbotron h2,
+.jumbotron h4 {
+  background-color: black;
+  color:seashell;
+  margin:0;
+  width:100%;
+  opacity:.9;
+  padding:5px;
+}
+
+.tea {
+  padding:5px;
+}
+.tea h2 {
+  margin-top:60px;
+  margin-bottom:0px;
+}
+.tea h4{
+  margin-top: .8rem;
+}
+
+.gallery,
+.gallery2{
+  width:1000px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:0 auto;
+  
+}
+@media only screen and (max-width: 1250px){
+  .gallery {
+    width:700px;
+  }
+}
+@media only screen and (max-width: 880px){
+  .gallery {
+    flex-direction:column;
+    width:400px;
+    align-content:center;
+  }
+}
+@media only screen and (max-width: 550px){
+  .gallery {
+    max-width:100%;
+  }
+}
+/*.gallery{
+  width:1000px;
+  display:flex;
+  justify-content:space-evenly;
+  flex-wrap:wrap;
+  margin:0 auto;
+}
+.gallery2 {
+  width:1000px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:0 auto;
+  color:red;
+}
+*/
+.gallery img,
+.gallery2 img {
+  max-width:300px;
+  height:200px;
+  margin:15px;
+}
+
+
+.locations {
+  display:flex;
+  background-image:url("../img-locations-background.jpg");
+  justify-content:center;
+  align-items:center;
+  height:500px;
+  max-width:1200px;
+  margin:30px auto 20px auto;
+  position:relative;
+  flex-wrap:wrap;
+  align-content:space-evenly;
+}
+
+
+.locations h2 {
+  flex-basis:100%;
+  margin:0px;
+}
+
+.site {
+  background-color:black;
+  opacity:.9;
+  width:300px;
+  border:1px white solid;
+  margin: 0 20px;
+  position:relative;
+
+}
+
+@media only screen and (max-width: 1180px){
+  .site h3,
+  .site h4{
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+}
+
+@media only screen and (max-width: 870px){
+  .site h3,
+  .site h4{
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  .locations h2 {
+    color:black;
+  }
+}
+
+
+/*if the flex div stretches vertically, use align-self: center;*/
+
+/*this code is for having the locations heading float above the second site in the row. the h2 whould have to be immediately after that second site's div so it is associated with it.
+.locations h2 {
+  position:absolute;
+  top:35px;
+  z-index: 3;
+}*/
+
+/*
+h2.exp {
+  position:absolute;
+  top:-65px;
+  left:50%;
+  transform: translateX(-50%);
+}absolute within a relative div. Then center by positioning it 50% from the left of the div. Then transforming it so that it moves 50% of its width back to the left */
+
+.info {
+  height:200px;
+}
+
+.rights {
+  margin-left:20px;
+  text-align:left;
+}
